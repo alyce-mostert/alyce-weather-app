@@ -10,6 +10,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
 
     <title>Alyce's Weather App</title>
@@ -37,15 +38,15 @@
             </div>
             <div class="col">
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Wind: 10km/h</li>
-                <li>Humidity: 55%</li>
+                <li>Feels like: <span id="feels-like">10</span>°</li>
+                <li>Wind: <span id="wind">10</span>km/h</li>
+                <li>Humidity: <span id="humidity">55</span>%</li>
               </ul>
             </div>
             <div class="col">
-              <h1>Perth</h1>
-              <h2>Wednesday 10:48</h2>
-              <h3>Chance of rain</h3>
+              <h1 id="city">Perth</h1>
+              <h2 id="date">Wednesday 10:48</h2>
+              <h3 id="conditions">Chance of rain</h3>
             </div>
           </div>
         </div>
