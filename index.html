@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/styles.css" />
 
     <title>Alyce's Weather App</title>
   </head>
@@ -18,33 +18,36 @@
     <div class="container">
       <div class="weather-app">
         <div class="row">
-          <div class="col-3">
+          <div class="col">
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
               alt="clear"
             />
             15°C | °F
           </div>
-          <div class="col-3">
+          <div class="col">
             <ul>
               <li>Precipitation: 0%</li>
               <li>Wind: 10km/h</li>
               <li>Humidity: 55%</li>
             </ul>
           </div>
-          <div class="col-6">
+          <div class="col">
             <h1>Perth</h1>
             <h2>Wednesday 10:48</h2>
+            <h3>Chance of rain</h3>
           </div>
         </div>
+        <p class="source-code-link">
+          <a
+            href="https://github.com/alyce-mostert/alyce-weather-app"
+            target="_blank"
+          >
+            Open-source code</a
+          >
+          by Alyce Mostert
+        </p>
       </div>
-      <a
-        href="https://github.com/alyce-mostert/alyce-weather-app"
-        target="_blank"
-      >
-        Open-source code</a
-      >
-      by Alyce Mostert
     </div>
     <script src="src/app.js"></script>
   </body>
