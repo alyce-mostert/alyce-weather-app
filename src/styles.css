@@ -21,8 +21,12 @@ h3 {
   color: #1a2ec9;
   font-size: 16px;
   text-align: right;
+}
+
+h3:first-letter {
   text-transform: capitalize;
 }
+
 li {
   list-style: none;
   font-size: 14px;
