@@ -40,10 +40,19 @@ function displayTemperature(response) {
   document.querySelector("#date").innerHTML = formatDate(
     response.data.time * 1000
   );
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+      "alt",
+      response.data.condition.description
+    );
 }
 
 let apiKey = "oe33c8e8f0dc27bd608235t719ad314c";
 let units = "metric";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query={Perth}&key=${apiKey}&units=${units}`;
+let city = "Perth";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(displayTemperature);
