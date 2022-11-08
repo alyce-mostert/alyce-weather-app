@@ -50,9 +50,19 @@ function displayTemperature(response) {
     );
 }
 
-let apiKey = "oe33c8e8f0dc27bd608235t719ad314c";
-let units = "metric";
-let city = "Perth";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+function search(city) {
+  let apiKey = "oe33c8e8f0dc27bd608235t719ad314c";
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
