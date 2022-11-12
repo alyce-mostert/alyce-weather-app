@@ -82,3 +82,22 @@ a {
   color: black;
   cursor: default;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+  color: #1a2ec9;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+  color: #1a2ec9;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: bolder;
+}
