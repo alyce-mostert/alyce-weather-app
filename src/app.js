@@ -48,6 +48,33 @@ function displayTemperature(response) {
       "alt",
       response.data.condition.description
     );
+  displayForecast();
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-day">${day}</div>
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+              alt=""
+              width="42px"
+            />
+              <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18°</span>
+                  <span class="weather-forecast-temperature-min">10°</span>
+              </div>
+        </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function search(city) {
@@ -94,3 +121,4 @@ let celsiusLink = document.querySelector("#units-celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Perth");
+displayForecast();
