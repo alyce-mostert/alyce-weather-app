@@ -48,7 +48,14 @@ function displayTemperature(response) {
       "alt",
       response.data.condition.description
     );
-  displayForecast();
+  getForecast(response.data.city);
+}
+
+function getForecast(forecast) {
+  let apiKey = "oe33c8e8f0dc27bd608235t719ad314c";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast() {
